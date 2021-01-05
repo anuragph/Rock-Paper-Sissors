@@ -21,6 +21,7 @@ function playRound(playerSelection, computerSelection) {
                 break;
             case 'paper':
                 message = 'Paper beats rock. You lose.';
+                score--;
                 break;
             case 'scissors':
                 message = 'Rock beats scissors. You win!';
@@ -35,13 +36,15 @@ function playRound(playerSelection, computerSelection) {
             case 'paper':
                 message = "It's a draw";
                 break;
-            case 'sissors':
+            case 'scissors':
                 message = 'Scissors beat paper. You lose.';
+                score--;
         }
     } else {
         switch(computerSelection) {
             case 'rock':
                 message = 'Rock beats scissors. You lose.';
+                score--;
                 break;
             case 'paper':
                 message = 'Scissors beat paper. You win!';
@@ -61,7 +64,14 @@ function game() {
     for(let i=0; i<5; i++) {
         playRound(playerSelection , computerSelection);
     }
-    console.log(`Score: ${score}/5`);
+
+    if (score > 0) {
+        console.log('YOU WoN THE GAME!! :)');
+    } else if (score < 0) {
+        console.log('YOU LOST THE GAME :(');
+    } else {
+        console.log('THE GAME ENDED IN A DRAW');
+    }
 }
 
 let score = 0;
