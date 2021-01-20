@@ -1,2 +1,1 @@
-A simple Rock Paper Scissors game using JavaScript which can be played in the
-browser console.
+Rock Paper Scissors game playable on the browser.
