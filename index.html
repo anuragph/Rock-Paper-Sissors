@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
+    <div class="container mt-5">
+        <p class="text-muted text-center">First to score 5 points wins.</p>
 
-    <p>First to score 5 points wins.</p>
-
-    <div class="game-area">
-        <button id="rock" class="game-button" value="rock">Rock</button>
-        <button id="paper" class="game-button" value="paper">Paper</button>
-        <button id="scissors" class="game-button" value="scissors">Scissors</button>
-    </div>
-
-    <div class="result-box">
-        <p id="result-text"></p>
-        <p id="scoreboard"></p>
-        <p id="winner-text"></p>
-    </div>
+        <div class="d-flex justify-content-center">
+            <button id="rock" class="game-button btn btn-dark m-1 px-4" value="rock">Rock</button>
+            <button id="paper" class="game-button btn btn-dark m-1 px-3" value="paper">Paper</button>
+            <button id="scissors" class="game-button btn btn-dark m-1" value="scissors">Scissors</button>
+        </div>
     
+        <div class="result-box text-center text-muted mt-5">
+            <p id="result-text"></p>
+            <p id="scoreboard"></p>
+            <p id="winner-text"></p>
+        </div>
+    </div>    
     
-
+    <!-- Javascript -->
     <script src="./js/main.js"></script>
 </body>
 </html>
